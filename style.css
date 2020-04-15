@@ -216,6 +216,7 @@ li {
 #works .card {
   width: 42%;
   margin-bottom: 50px;
+  padding:10px 15px;
 }
 
 #works .card-image {
@@ -304,7 +305,6 @@ li {
 
 .sub-title{
   font-size: 20px;
-  font-weight: 600;
   margin-bottom:-5px;
 }
 /*--------------------------------
@@ -408,21 +408,6 @@ li {
 
   .section .section-title {
     font-size: 32px;
-  }
-
-  #feature .two-column-wrapper {
-    width: 100%;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-
-  #feature .two-column-image {
-    width: 90%;
-    margin: 0 auto 20px;
-  }
-
-  #feature .two-column-desc {
-    width: 100%;
   }
 
   #works .card {
