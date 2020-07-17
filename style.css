@@ -86,7 +86,7 @@ li {
   font-size: 32px;
   line-height: 1;
   text-align: center;
-  color: #757575;
+  color: #33ccff;
   margin-bottom: 5px;
 }
 
@@ -165,7 +165,7 @@ li {
 
 .section .section-title-block {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 .section .section-title {
@@ -213,20 +213,20 @@ li {
 　works
 ---------------------------------*/
 
-#works .card {
-  width: 42%;
-  margin-bottom: 50px;
-  padding:10px 15px;
+.card-wrapper{
+  width:100%;
+  display: inline-block;
 }
 
-#works .card-image {
-  display: block;
-  margin-bottom: 8px;
+.card{
+  margin: 20px;
+  width:30%;
+  float:left;
 }
-
 #works .card-caption-title {
   font-size: 13px;
   font-weight: bold;
+  margin-top: 10px;
 }
 
 #works .card-caption-info {
@@ -237,22 +237,21 @@ li {
   font-size: 10px;
 }
 
-#works .card-wrapper {
-  padding: 20px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+ .caption {
+	font-size:		130%;
+	text-align: 		center;
+	padding-top:		80px;
 }
+
+
 
 /*--------------------------------
 　about
 ---------------------------------*/
 
+#about{
+  background-color:#FFFBCB;
+}
 #about .two-column-image {
   width: 33%;
 }
@@ -260,52 +259,58 @@ li {
 #about .two-column-desc {
   width: 62%;
 }
+
+.text{
+  margin-top: 20px;
+}
 /*--------------------------------
  skill
 ---------------------------------*/
 
-#skill .card-wrapper {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+.skill-explanation {           
+    align-items:stretch; 
+    width:100%;
+     white-space: nowrap;
+     letter-spacing: -1em; 
 }
 
-#skill .card {
-  flex-basis: 46%;
-  margin-bottom: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  background-color: #ffffcc;
-  padding: 10px 15px;
-}
-
-
-#skill .skill-desc {
-  flex-basis: calc(100% - 75px - 30px);
-}
-
-#skill .skill-desc-title {
-  margin-bottom: 20px;
+#skill-title{
   text-align: center;
+  margin-top: 30px;
+}
+ 
+.container {
+    margin:  20px;
+    border-radius:  5px;
+    display: inline-block;
+    width:100%;
+}
+ 
+.skill-1 {
+    background-color:  #bbded6; 
+    display: inline-block;
+    width:50%;
+    letter-spacing: normal; 
+    white-space: normal;
+    }
+ 
+.skill-2 {
+    background-color: #ED5485; 
+    width:50%;
+    display: inline-block;
+     letter-spacing: normal; 
+    white-space: normal; 
 }
 
-.sub-title{
-  font-size: 20px;
-  margin-bottom:-5px;
+
+.fas{
+   margin-left: 50px;
+   margin-bottom: 20px;
+}
+
+.skill-name{
+  margin-left: 50px;
+  font-weight:bold;
 }
 /*--------------------------------
  contact
@@ -410,8 +415,10 @@ li {
     font-size: 32px;
   }
 
+
   #works .card {
     width: 48%;
+    padding: 0
   }
 
   #works .card-caption-title {
