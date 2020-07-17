@@ -4,15 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
   <meta property='og:type' content='website'>
-  <meta property='og:title' content='Portfolio'>
-  <meta name="description" content="森澤香乃のポートフォリオです。" />
+  <meta property='og:title' content=' Portfolio'>
+  <meta name="description" content="" />
   <title> ポートフォリオ</title>
   <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
-  <link href="https://morisawa25.github.io/portfolio/reset.css" media="all" rel="stylesheet" type="text/css" />
-  <link href="https://morisawa25.github.io/portfolio/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="css/reset.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
   <link rel="shortcut icon" href="img/favicon.ico" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
         <span class="logo-name">Kano Morisawa’s</span>
         <span class="logo-title">PORTFOLIO</span>
       </h1>
-       <img src="https://morisawa25.github.io/portfolio/main_visual.jpg" alt="メインビジュアル"/>
+       <img src="img/main.png" alt="メインビジュアル" width:100%;>
     </header>
     <nav id="gnav">
       <ul>
@@ -41,21 +42,74 @@
           </div>
           <div class="two-column-wrapper">
             <div class="two-column-image">
-              <img src="https://morisawa25.github.io/portfolio/about.PNG" alt="プロフィール写真"/>
+              <img src="img/profile/about.PNG" alt="プロフィール写真"/>
             </div>
             <div class="two-column-desc">
-              <p class="text">
-              はじめまして。森澤香乃と申します。<br><br><br>
-              <br>
-             　独学でプログラミングを勉強し、一から自力でホームページを作るweb制作力をちゃんとつけたいと感じ、スクールで学びました。<br>
-               任されたお仕事をやりきることはもちろん、自分でどんどん学ぶところ活かし、多くの人が見るもの使うものであることを意識して、より最適なサイトを作れるようになっていきたいと思います。<br>
-              
-              </p>
+              <p class="text">ものを作ることが好きです。<br>作ることを通じて、ワクワクする時間をお届けできるようになりたいと思っています。<br>モットーは、「現状維持よりもチャレンジ」です。<br><br>
+              目指しているものがありましたが、区切りをつけて今後を考えていました。そんな時、プログラミングやデザインに興味を持ち学んでみて、ものを作る過程が好きな部分を活かしていきたいと思いました。<br><br>向上心が強く、行動が速いところを活かし、成長し続けていきたいと思います。</p>
             </div>
           </div>
         </div>
       </section>
-      
+       <!--スキル-->
+      <section class="section" id="skill">
+        <div class="inner">
+          <div class="section-title-block">
+            <h2 class="section-title">skill</h2>
+          </div>
+         <div class="skill-explanation">
+          <div class="skill-1">
+          <h3 id="skill-title">web skill</h3>
+          <!--コーディング-->
+         <div class="container">
+            <div id="pic_frame">
+              <div class="skill-type">
+              <p class="skill-name">コーディング</p>
+              <i class="fas fa-desktop fa-5x"></i>
+              </div>
+               <p>HTML5/CSS3/JavaScript<br>見やすいコード、そして人が使うものであることを意識し、制作していきます。</p> 
+            </div>
+            </div>
+            <!--デザイン-->
+             <div class="container">
+              <div id="pic_frame">
+               <div class="skill-type">
+                <p class="skill-name" >デザイン</p>
+                <i class="fas fa-stamp fa-5x"></i>
+               </div>
+               <p>独学でPhotoshopを学んでいます。<br>使い方次第で多くのことができるからこそ、スキルを磨き、その場に最適なデザインができるようになりたいと思っています。</p> 
+              </div>
+              </div>
+             </div>
+            <div class="skill-2">
+            <h3 id="skill-title">creative</h3>
+            <!--イラスト-->
+              <div class="container">
+              <div id="pic_frame">
+               <div class="skill-type">
+                <p class="skill-name">イラスト</p>
+                <i class="fas fa-palette fa-5x"></i>
+               </div>
+               <p>幼少期は暇さえあれば絵を描いていました。今も時間を作って描いています。<br>コミカルなものだったり人や建物を緻密にまで描きます。
+               <br><br>
+               </p> 
+              </div>
+             </div>
+             <!--作曲-->
+             <div class="container">
+              <div id="pic_frame">
+               <div class="skill-type">
+                <p class="skill-name">作曲</p>
+                <i class="fas fa-music fa-5x"></i>
+               </div>
+               <p>DTMで曲作りをしています。<br><br></p>
+              </div>
+            </div>
+           </div>
+        
+         </div>
+        </div>
+      </section>
       <!--作品-->
       <section class="section" id="works">
         <div class="inner">
@@ -66,118 +120,73 @@
                 これまでの制作作品です。</p>
             </div>
           </div>
-          <div class="card-wrapper my-gallery">
+          <div class="card-wrapper">
             <!--work1-->
             <figure class="card">
-              <a href="https://morisawa25.github.io/portfolio/works/work1.jpg"  class="card-image">
-                <img src="https://morisawa25.github.io/portfolio/works/work1.jpg" alt="works1" />
+              <a href="img/works/work1.jpg"  class="card-image">
+                <img src="img/works/work1.jpg" alt="works1" />
               </a>
               <figcaption class="card-caption">
                 <p class="card-caption-title">オーガニックコットンサイト「MLK」</p>
-                <p class="card-caption-info">HTML5/CSS3/JavaScript/bootstrap4</p>
-                <p class="card-explanation">オーガニックコットンを用いるファッションブランドサイトを作りました。<br>
-                白と、柔らかな暖色を使い、ナチュラルな印象を与えられるように意識しました。<br>
+                <p class="card-caption-info">HTML5/CSS3/JavaScript</p>
+                <p class="card-explanation">
+                オーガニックコットンを用いる架空のファッションブランドのサイトです。<br>
+                オーガニックの優しく柔らかいイメージを表現しました。<br>
                 スマホサイズの時はサイドが隠れるようにしました。</p>
                 <p class="card-caption-url"><a class="url-link" href=" https://morisawa25.github.io/organic.github.io/" target="_blank">GitHub</a></p>
               </figcaption>
             </figure>
             <!--work2-->
             <figure class="card">
-              <a href="https://morisawa25.github.io/portfolio/works/work2.jpg" class="card-image">
-                <img src="https://morisawa25.github.io/portfolio/works/work2.jpg" alt="works2" />
+              <a href="img/works/work2.jpg" class="card-image">
+                <img src="img/works/work2.jpg" alt="works2" />
               </a>
               <figcaption class="card-caption">
                 <p class="card-caption-title">ウィッシュミュージックスクール</p>
-                <p class="card-caption-info">HTML5/CSS3/jQuery/bootstrap4</p>
-                <p class="card-explanation">音楽スクールの架空サイトです。興味をもっていただいた方に注目していただけるよう、無料体験レッスンに関するサイドバーを固定し、<br>
-                フッターに電話番号とSNSを大きく記載してみました。また、TOP画面に遡らなくてもいいようにするため、ヘッダーを固定し、
-                メイン画像半分を過ぎると色が変わるようにしました。</p>
+                <p class="card-caption-info">HTML5/CSS3/JavaScript</p>
+                <p class="card-explanation">音楽スクールの架空サイトです。<br>
+                自身が音楽スクールを選ぶときに、色が明るくワイワイしているイメージのところが多く、「ゆるいのかな？」と選択に迷ったことがあったため、シックなイメージのサイトにしてみました。<br><br></p>
                 <p class="card-caption-url"><a class="url-link" href="https://morisawa25.github.io/wish-music-school/" target="_blank">GitHub</a></p>
               </figcaption>
             </figure>
             <!--work3-->
             <figure class="card">
-              <a href="https://morisawa25.github.io/portfolio/works/work3.jpg"  class="card-image">
-                <img src="https://morisawa25.github.io/portfolio/works/work3.jpg" alt="works3" />
+              <a href=""  class="card-image">
+                <img src="img/works/work3.jpg" alt="works3" />
               </a>
               <figcaption class="card-caption">
                 <p class="card-caption-title">自分だけの本棚サイト（スクールのカリキュラム内で作成）</p>
-                <p class="card-caption-info">HTML5/CSS3/JavaScript/jQuery/bootstrap4/firebase</p>
-                <p class="card-explanation">スクールのカリキュラム内で作成しました。自由に書籍データを保存・削除できる本棚サイトです。firebaseを使いました。<br>
-                mail「user@example.jp」、pass「password」と入力してログインしていただくと、ログインできます。</p>
+                <p class="card-caption-info">HTML5/CSS3/JavaScript/firebase</p>
+                <p class="card-explanation">お気に入りの本のデータを自由に保存・削除できる本棚サイトを作りました。<br>
+                サーバーの部分はfirebaseを使いました。<br><br></p>
                 <p class="card-caption-url"><a class="url-link" href=" https://morisawa25.github.io/application.bookshelf/" target="_blank">GitHub</a></p>
               </figcaption>
             </figure>
-            <!--works4-->
+             <!--work5-->
             <figure class="card">
-              <a href="https://morisawa25.github.io/portfolio/works/work4.jpg" class="card-image">
-                <img src="https://morisawa25.github.io/portfolio/works/work4.jpg" alt="works4" />
+              <a href=""  class="card-image">
+                <img src="img/works/work6.JPG" alt="works6" />
               </a>
               <figcaption class="card-caption">
-                <p class="card-caption-title">世界の子犬・子猫ギャラリーサイト（スクールのカリキュラム内で作成）</p>
-                <p class="card-caption-info">HTML5/CSS3/jQuery/bootstrap4/Vue.js/webAPI</p>
-                <p class="card-explanation">スクールのカリキュラム内で作成しました。子犬と子猫のギャラリーサイトです。<br>
-                Waypoints.jsとAnimate.cssを使用してアニメーションをつけました。</p>
-                <p class="card-caption-url"><a class="url-link" href=" https://morisawas25.github.io/animal-gallery.site/" target="_blank">GitHub</a></p>
+                <p class="card-caption-title">オリジナルTシャツ</p>
+                <p class="card-caption-info"></p>
+                <p class="card-explanation">親に頼まれ、オリジナルTシャツのデザインをしました。</p>
+                <p class="card-caption-url"><a class="url-link" href=" https://morisawa25.github.io/portfolio/works/work6.JPG/" target="_blank">GitHub</a></p>
               </figcaption>
             </figure>
-            <!--works5-->
-             <figure class="card">
-              <a href="https://morisawa25.github.io/portfolio/ビルと魚コラージュ.png" class="card-image">
-                <img src="https://morisawa25.github.io/portfolio/ビルと魚コラージュ.png" alt="works5" />
+            <!--work6-->
+            <figure class="card">
+              <a href=""  class="card-image">
+                <img src="img/works/work5.png" alt="works5" />
               </a>
               <figcaption class="card-caption">
-                <p class="card-caption-title"></p>
-                <p class="card-caption-info">photoshop</p>
-                <p class="card-explanation">コラージュを作りました。テーマは「遊び心が世界をつくる」です。</p>
-                <p class="card-caption-url"><a class="url-link" href="https://morisawa25.github.io/portfolio/ビルと魚コラージュ.png" target="_blank">GitHub</a></p>
+                <p class="card-caption-title">キャンプイベントのポスター</p>
+                <p class="card-caption-info">Photoshop</p>
+                <p class="card-explanation">架空のキャンプポスターです。コンセプトは「自然の中で味わう一味違った女子会」です。<br>
+                ガーランドや手描きのイラストをちりばめ、キュートで楽しいデザインにしました。</p>
+                <p class="card-caption-url"><a class="url-link" href=" https://morisawa25.github.io/portfolio/works/work5.png/" target="_blank">GitHub</a></p>
               </figcaption>
             </figure>
-            <!--works6-->
-             <figure class="card">
-              <a href="https://morisawa25.github.io/portfolio/T-shirt.JPG" class="card-image">
-                <img src="https://morisawa25.github.io/portfolio/T-shirt.JPG" alt="works6" />
-              </a>
-              <figcaption class="card-caption">
-                <p class="card-caption-title"></p>
-                <p class="card-caption-info">photoshop</p>
-                <p class="card-explanation">親から頼まれ、オリジナルTシャツを作りました。</p>
-                <p class="card-caption-url"><a class="url-link" href="https://morisawa25.github.io/portfolio/T-shirt.JPG" target="_blank">GitHub</a></p>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-      
-      <!--スキル-->
-      <section class="section" id="skill">
-        <div class="inner">
-          <div class="section-title-block">
-            <h2 class="section-title">skill</h2>
-            <p></p>
-            
-          </div>
-          <div class="card-wrapper">
-            <div class="card">
-              <div class="skill-desc">
-                <h3 class="skill-desc-title">HTML5/CSS3</h3>
-                <p class="text">・HTML→基本（構成や要素）<br>・CSS→セレクタ、プロパティ、flexboxなど。<br>
-                基本をひととおり学びました。<br>フレームワークはbootstrap4を学びました。</p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="skill-desc">
-                <h3 class="skill-desc-title">JavaScript</h3>
-                <p class="text">変数、文字列、関数、配列、オブジェクト、メソッド、DOM操作など学びました。<br>フレームワーク、ライブラリはjQuery/Vue.jsを学びました。</p>
-              </div>
-            </div>
-            </div>
-           <div class="card">
-              <div class="skill-desc">
-                <h3 class="skill-desc-title">Photoshop</h3>
-                <p class="text">現在勉強中です。用途や雰囲気に合わせて作成できる力をつけていきます。</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -192,7 +201,7 @@
           </div>
           <div class="contact-wrapper">
            <div class="form">
-             <form action="https://morisawa25.github.io/portfolio/complete.html">
+             <form action="complete.html">
                <div class="form-group row">
                  <label class="text-right col-sm-4">氏名 </label>
                  <div class="col-sm-5">
@@ -252,7 +261,7 @@
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script type='text/javascript' src="https://morisawa25.github.io/portfolio/script.js"></script>
+  <script type='text/javascript' src="js/script.js"></script>
   
 </body>
 </html>
