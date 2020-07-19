@@ -73,7 +73,6 @@ li {
   -ms-align-items: center;
   align-items: center;
   height: 550px;
-  margin-bottom:20px;
 }
 
 #header .logo {
@@ -252,6 +251,7 @@ li {
 
 #about{
   background-color:#FFFBCB;
+ margin-top:40px;
 }
 #about .two-column-image {
   width: 33%;
