@@ -73,6 +73,7 @@ li {
   -ms-align-items: center;
   align-items: center;
   height: 550px;
+  margin-bottom:20px;
 }
 
 #header .logo {
