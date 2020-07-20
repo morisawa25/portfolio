@@ -73,6 +73,7 @@ li {
   -ms-align-items: center;
   align-items: center;
   height: 550px;
+
 }
 
 #header .logo {
@@ -213,16 +214,24 @@ li {
 　works
 ---------------------------------*/
 
+#works{
+  background-color:#FFFBCB;
+}
 .card-wrapper{
   width:100%;
-  display: inline-block;
-}
+	text-align: left;
+	display:flex;
+	flex-wrap:wrap;
+} 
 
 .card{
-  margin: 20px;
-  width:30%;
-  float:left;
+  float: left;
+	width: calc(30% - 2px);
+	max-width: 100%;
+	margin: 10px;
+	overflow: hidden;
 }
+
 #works .card-caption-title {
   font-size: 13px;
   font-weight: bold;
@@ -237,13 +246,7 @@ li {
   font-size: 10px;
 }
 
- .caption {
-	font-size:		130%;
-	text-align: 		center;
-	padding-top:		80px;
-}
-
-
+ 
 
 /*--------------------------------
 　about
@@ -251,7 +254,7 @@ li {
 
 #about{
   background-color:#FFFBCB;
- margin-top:60px;
+  margin-top:100px;
 }
 #about .two-column-image {
   width: 33%;
@@ -371,7 +374,10 @@ li {
     font-size: 13px;
     line-height: 1.7;
   }
-
+  
+  #wrapper img{
+  padding-bottom: 50px;
+  }
   #header {
     height: 60vh;
   }
@@ -387,7 +393,8 @@ li {
   #header .logo-desc {
     font-size: 10px;
   }
-
+  
+ 
   #gnav li {
     padding: 0 10px;
   }
@@ -416,10 +423,9 @@ li {
     font-size: 32px;
   }
 
-
   #works .card {
-    width: 48%;
-    padding: 0
+    width: 60%;
+    margin:10px auto;
   }
 
   #works .card-caption-title {
@@ -428,6 +434,10 @@ li {
 
   #works .card-caption-info {
     font-size: 11px;
+  }
+  
+  #about{
+    margin-top: 50px;
   }
 
   #about .two-column-wrapper {
@@ -443,23 +453,6 @@ li {
 
   #about .two-column-desc {
     width: 100%;
-  }
-
-  #skill .card-wrapper {
-    width: 100%;
-  }
-
-  #skill .card {
-    flex-basis: 100%;
-  }
-
-  #skill .skill-desc {
-    flex-basis: calc(100% - 45px - 20px);
-  }
-
-  #skill .rate {
-    height: 15px;
-    font-size: 15px;
   }
 
   #skill .rate:before,
