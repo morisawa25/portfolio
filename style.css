@@ -1,37 +1,30 @@
-/* CSS Document */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 
 body {
-  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-  color: #333;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",
+  "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic,
+  "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 15px;
   line-height: 1.8;
   letter-spacing: .8px;
   word-break: break-all;
+  color: #333;
 }
 
 a {
-  color: #1ca9e3;
   text-decoration: none;
+  color: #1ca9e3;
 }
 
-a:hover,
-a:hover img {
-  opacity: .8;
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
-  -ms-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s;
-}
-
-img,
-video,
-object {
+img {
   max-width: 100%;
   height: auto;
-  border: none;
-  vertical-align: bottom;
-  display: block;
+  vertical-align: middle;
+  border-style: none;
 }
 
 ul,
@@ -39,471 +32,595 @@ li {
   list-style: none;
 }
 
-/*--------------------------------
-　全体
----------------------------------*/
+.pc-only {
+  display: block;
+}
 
-#wrapper {
-  background-color: #fff;
+.sp-only {
+  display: none;
+}
+
+.hover-action {
+  display: block;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .1);
+}
+
+.hover-action:hover {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-transform: translate(0, -4px);
+  transform: translate(0, -4px);
+  -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .12);
+}
+
+/*--------------------------------
+ 文字
+---------------------------------*/
+.heading-primary {
+  font-family: "Open sans", sans-serif;
+  font-size: 40px;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 15px;
+  letter-spacing: .05em;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section-lead {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+/*--------------------------------
+ レイアウト
+---------------------------------*/
+.wrapper {
+  padding-top: 68px;
+}
+
+.section {
+  padding: 120px 0;
+}
+
+.section:nth-of-type(odd) {
+  background-color: #f7f7f7;
 }
 
 .inner {
-  max-width: 1320px;
-  width: 100%;
+  max-width: 1380px;
   margin: 0 auto;
-  padding: 0 10px;
-}
-
-#contents {
-  padding: 100px 0;
+  padding: 0 40px;
 }
 
 /*--------------------------------
-　ヘッダー
+ヘッダー
 ---------------------------------*/
-
-#header {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.header {
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
   align-items: center;
-  height: 550px;
-
+  justify-content: center;
+  
 }
 
-#header .logo {
-  display: block;
-  position: absolute;
-}
-
-#header .logo-name {
-  display: block;
-  font-family: 'Amatic SC', cursive;
-  font-size: 32px;
-  line-height: 1;
+.logo {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 0 20px;
   text-align: center;
-  color: #33ccff;
-  margin-bottom: 5px;
 }
 
-#header .logo-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 88px;
-  font-weight: normal;
-  color: #33ccff;
+.logo-title {
+  font-family: "Open sans", sans-serif;
+  font-size: 64px;
   line-height: 1;
-  letter-spacing: .1em;
-}
-
-#header .logo-desc {
-  font-family: "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "游明朝体", "Yu Mincho", YuMincho, "MS P明朝", "MS PMincho", serif;
-  display: block;
-  font-size: 14px;
   letter-spacing: .2em;
-  text-align: center;
-  margin-top: 10px;
+}
 
+.logo-subtitle {
+  font-size: 20px;
+  margin-top: 5px;
+  text-align: center;
+  letter-spacing: .2em;
 }
 
 /*--------------------------------
-　グローバルナビ
+ グローバルナビ
 ---------------------------------*/
-
-#gnav {
-  padding: 10px;
-  font-family: 'Cormorant Garamond', serif;
-
-  z-index: 100;
-}
-
-#gnav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-#gnav li {
-  padding: 0 30px;
-}
-
-#gnav li a {
-  font-weight: bold;
-  font-size: 16px;
-  color: #333;
-  letter-spacing: .1em;
-  text-transform: lowercase;
-}
-
-#gnav.fixed {
+.gnav {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
   width: 100%;
   background-color: #fff;
-  box-shadow: 0px 6px 3px -3px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0px 6px 3px -3px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 6px 3px -3px rgba(0, 0, 0, 0.2);
-  transform: translate3d(0, 0, 0);
+  -webkit-box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .2);
+  box-shadow: 0 3px 3px -3px rgba(0, 0, 0, .2);
 }
 
-/*--------------------------------
-　Section
----------------------------------*/
-
-.section .inner {
-  padding: 80px 10px;
-}
-
-.section .section-title-block {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.section .section-title {
-  font-family: 'Cormorant Garamond', serif;
-  text-transform: lowercase;
-  letter-spacing: .2em;
-  display: inline-block;
-  font-size: 36px;
-  line-height: 1;
-  margin-bottom: 10px;
-  color: #33ccff;
-}
-
-.section .section-desc {
-  text-align: center;
-}
-
-.two-column-wrapper {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
+.gnav-list {
   display: flex;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.two-column-image {
-  width: 33%;
-}
-
-.two-column-image img {
-  margin: 0 auto;
-}
-
-.two-column-desc {
-  width: 62%;
-}
-
-/*--------------------------------
-　works
----------------------------------*/
-
-#works{
-  background-color:#FFFBCB;
-}
-.card-wrapper{
-  width:100%;
-	text-align: left;
-	display:flex;
-	flex-wrap:wrap;
-} 
-
-.card{
-  float: left;
-	width: calc(30% - 2px);
-	max-width: 100%;
-	margin: 10px;
-	overflow: hidden;
-}
-
-#works .card-caption-title {
-  font-size: 13px;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-#works .card-caption-info {
-  font-size: 12px;
-}
-
-#works .card-caption-url {
-  font-size: 10px;
-}
-
- 
-
-/*--------------------------------
-　about
----------------------------------*/
-
-#about{
-  background-color:#FFFBCB;
-  margin-top:100px;
-}
-#about .two-column-image {
-  width: 33%;
-}
-
-#about .two-column-desc {
-  width: 62%;
-}
-
-.text{
-  margin-top: 20px;
-}
-/*--------------------------------
- skill
----------------------------------*/
-
-.skill-explanation {           
-    align-items:stretch; 
-    width:100%;
-     white-space: nowrap;
-     letter-spacing: -1em; 
-}
-
-#skill-title{
-  text-align: center;
-  margin-top: 30px;
-}
- 
-.container {
-    margin:  20px;
-    border-radius:  5px;
-    display: inline-block;
-    width:100%;
-}
- 
-.skill-1 {
-    background-color:  #bbded6; 
-    display: inline-block;
-    width:50%;
-    letter-spacing: normal; 
-    white-space: normal;
-    }
- 
-.skill-2 {
-    background-color: #ED5485; 
-    width:50%;
-    display: inline-block;
-     letter-spacing: normal; 
-    white-space: normal; 
-}
-
-
-.fas{
-   margin-left: 50px;
-   margin-bottom: 20px;
-}
-
-.skill-name{
-  margin-left: 50px;
-  font-weight:bold;
-}
-/*--------------------------------
- contact
----------------------------------*/
-.form{
-  margin-bottom: -40px;
-}
-
-/*--------------------------------
- Footer
----------------------------------*/
-
-#footer {
-  background-color: #333;
-}
-
-#footer .inner {
-  padding: 30px;
-}
-
-#footer .footer-link ul {
-  font-family: 'Cormorant Garamond', serif;
-  letter-spacing: .1em;
-  text-transform: lowercase;
-  margin-bottom: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
   justify-content: center;
 }
 
-#footer .footer-link li {
-  font-size: 12px;
-  padding: 0 20px;
+.gnav-item {
+  font-family: "Open sans", sans-serif;
+  font-size: 16px;
+  padding: 0 24px;
+  letter-spacing: .05em;
 }
 
-#footer .footer-link li a {
-  color: #fff;
-  font-weight: bold;
+.gnav-link {
+  position: relative;
+  display: inline-block;
+  padding: 20px 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: #333;
 }
 
-#footer .copyright {
-  font-size: 10px;
-  color: #8c8c8c;
+.gnav-link:hover {
+  opacity: 1;
+}
+
+.gnav-link:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  content: "";
+  transition: .3s;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #333;
+}
+
+.gnav-link:hover:after {
+  width: 100%;
+}
+
+/* iOS対策 */
+.ios .gnav-link:after,
+.ios .gnav-link:hover:after {
+  display: none;
+}
+
+/*--------------------------------
+ Works
+---------------------------------*/
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -40px;
+}
+
+.works-item {
+  flex: 40 40 ;
+  margin-right: 1.52671%;
+  margin-bottom: 40px;
+}
+
+.works-item:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+.works-body {
   text-align: center;
+}
+
+.works-title {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.works-text {
+  font-size: 10px;
+}
+
+.works-url {
+  font-size: 10px;
+}
+
+.works-image.fadein {
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  opacity: 0;
+}
+
+.works-image.fadein.lazyloaded {
+  opacity: 1;
+}
+
+/*--------------------------------
+ Feature
+---------------------------------*/
+.feature-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feature-image-wrapper {
+  flex: 0 0 45%;
+  margin-right: 40px;
+}
+
+.feature-body {
+  flex: 1;
+}
+
+.feature-body p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/*--------------------------------
+ About
+---------------------------------*/
+.about-section .inner {
+  max-width: 1000px;
+}
+
+.about-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about-image-wrapper {
+  flex: 0 0 220px;
+  margin-right: 40px;
+}
+
+.about-image {
+  border-radius: 50%;
+  box-shadow: 0 0 25px 0 #d9d9d9;
+}
+
+.about-body {
+  flex: 1;
+}
+
+.about-body p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/*--------------------------------
+ Skill
+---------------------------------*/
+.skill-section .inner {
+  max-width: 1000px;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -50px;
+}
+
+.skill-item {
+  display: flex;
+  flex: 0 0 20%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.skill-image-wrapper {
+  flex: 0 0 60px;
+  margin-right: 20px;
+}
+
+.skill-body {
+  flex: 1;
+}
+
+.skill-body p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.skill-title {
+  margin-bottom: 3px;
+}
+
+.rate {
+  position: relative;
+  font-size: 16px;
+  display: inline-block;
+  width: 100%;
+  height: 20px;
+  letter-spacing: .3em;
+}
+
+.rate:before,
+.rate:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 20px;
+  display: inline-block;
+  height: 20px;
+  content: "★★★★★";
+}
+
+.rate:before {
+  color: #ddd;
+}
+
+.rate:after {
+  overflow: hidden;
+  white-space: nowrap;
+  color: #f181b4;
+}
+
+.rate1:after {
+  width: 20px;
+}
+
+.rate2:after {
+  width: 40px;
+}
+
+.rate3:after {
+  width: 60px;
+}
+
+.rate4:after {
+  width: 80px;
+}
+
+.rate5:after {
+  width: 100px;
+}
+
+/*--------------------------------
+ Contact
+---------------------------------*/
+.contact-list {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-item {
+  width: 50px;
+  margin: 0 20px;
+  text-align: center;
+}
+
+.contact-text {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/*--------------------------------
+ フッター
+---------------------------------*/
+.footer {
+  background-color: #1d1d1d;
+}
+
+.footer .inner {
+  padding: 30px;
+}
+
+.copyright {
+  font-size: 10px;
+  text-align: center;
+  color: #8c8c8c;
+}
+
+.page-top {
+  font-size: 12px;
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #ccc;
 }
 
 /*media Queries 767
 ----------------------------------------------------*/
-
 @media screen and (max-width: 767px) {
   body {
     font-size: 13px;
     line-height: 1.7;
   }
-  
-  #wrapper img{
-  padding-bottom: 50px;
-  }
-  #header {
-    height: 60vh;
+
+  .pc-only {
+    display: none;
   }
 
-  #header .logo-title {
-    font-size: 40px;
+  .sp-only {
+    display: block;
   }
 
-  #header .logo-name {
-    font-size: 16px;
+  .hover-action {
+    -webkit-transition: none;
+    transition: none;
   }
 
-  #header .logo-desc {
-    font-size: 10px;
-  }
-  
- 
-  #gnav li {
-    padding: 0 10px;
+  .hover-action:hover {
+    -webkit-transition: none;
+    transition: none;
+    -webkit-transform: none;
+    transform: none;
   }
 
-  #gnav li a {
-    font-size: 12px;
+  /* 文字 */
+  .section-heading {
+    margin-bottom: 20px;
   }
 
-  #gnav li a:hover {
-    opacity: 1;
+  .heading-primary {
+    font-size: 22px;
   }
 
-  #contents {
-    padding: 40px 0;
+  /* レイアウト */
+  .wrapper {
+    padding-top: 82px;
+  }
+
+  .section {
+    padding: 60px 0;
   }
 
   .section .inner {
-    padding: 30px 15px;
+    padding: 0 15px;
   }
 
-  .section .section-title-block {
-    margin-bottom: 10px;
+  /* ヘッダー */
+  .header {
+    height: 70vh;
   }
 
-  .section .section-title {
-    font-size: 32px;
+  .logo-title {
+    font-size: 28px;
+    letter-spacing: .16em;
   }
 
-  #works .card {
-    width: 60%;
-    margin:10px auto;
+  .logo-subtitle {
+    font-size: 14px;
   }
 
-  #works .card-caption-title {
-    font-size: 12px;
+  /* グローバルナビ */
+  .gnav {
+    padding: 15px 0;
   }
 
-  #works .card-caption-info {
-    font-size: 11px;
-  }
-  
-  #about{
-    margin-top: 50px;
+  .gnav-item {
+    font-size: 13px;
+    padding: 2px 15px;
   }
 
-  #about .two-column-wrapper {
-    width: 100%;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+  .gnav-link {
+    padding: 0;
   }
 
-  #about .two-column-image {
-    width: 50%;
+  .gnav-link:hover {
+    opacity: 1;
+  }
+
+  .gnav-link:after {
+    display: none;
+  }
+
+  /* Works */
+  .works-body {
+    text-align: left;
+  }
+
+  .works-title {
+    font-size: 10px;
+  }
+
+  .works-list {
+    justify-content: space-between;
+  }
+
+  .works-item {
+    flex: 0 0 48%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  /* Feature */
+  .feature-item {
+    display: block;
+  }
+
+  .feature-image-wrapper {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  /* About */
+  .about-item {
+    display: block;
+  }
+
+  .about-image-wrapper {
+    width: 100px;
+    max-width: 100%;
     margin: 0 auto 20px;
   }
 
-  #about .two-column-desc {
-    width: 100%;
+  /* Skill */
+  .skill-list {
+    display: block;
+    margin-bottom: 0;
   }
 
-  #skill .rate:before,
-  #skill .rate:after {
+  .skill-item {
+    max-width: 100%;
+    margin-bottom: 35px;
+  }
+
+  .skill-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .skill-image-wrapper {
+    flex: 0 0 75px;
+    margin-right: 15px;
+  }
+
+  .rate {
+    font-size: 15px;
     height: 15px;
-    line-height: 15px;
   }
 
-  #skill .rate1:after {
+  .rate:before,
+  .rate:after {
+    line-height: 15px;
+    height: 15px;
+  }
+
+  .rate1:after {
     width: 15px;
   }
 
-  #skill .rate2:after {
+  .rate2:after {
     width: 35px;
   }
 
-  #skill .rate3:after {
+  .rate3:after {
     width: 55px;
   }
 
-  #skill .rate4:after {
+  .rate4:after {
     width: 75px;
   }
 
-  #skill .rate5:after {
+  .rate5:after {
     width: 95px;
   }
 
-  #contact .contact-list ul {
-    width: 100%;
+  /* Contact */
+  .contact-item {
+    width: 40px;
+    margin: 0 10px;
   }
 
-  #contact .contact-list li {
-    flex-basis: 30%;
-  }
-
-  #contact .contact-list li img {
-    width: 30px;
-  }
-
-  #contact .contact-list-desc {
-    font-size: 12px;
-  }
-
-  #footer .inner {
+  /* フッター */
+  .footer .inner {
     padding: 20px 0;
-  }
-
-  #footer .footer-link li {
-    font-size: 10px;
-    padding: 0 10px;
-    margin-bottom: 5px;
   }
 }
